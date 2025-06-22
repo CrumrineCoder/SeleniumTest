@@ -9,4 +9,6 @@ class TextInputPage(BasePage):
         super().__init__(driver)
 
     def normal_is_editable(self):
-        self.enter_text(self, self.BASE_TEXTINPUT, "Hi")
+        self.enter_text(self.BASE_TEXTINPUT, "Hi")
+        text_input_value = self.get_text(self.BASE_TEXTINPUT)
+        assert(text_input_value == "Hi")
