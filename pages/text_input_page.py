@@ -8,7 +8,8 @@ class TextInputPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
 
-    def normal_is_editable(self):
-        self.enter_text(self.BASE_TEXTINPUT, "Hi")
-        text_input_value = self.get_text(self.BASE_TEXTINPUT)
-        assert(text_input_value == "Hi")
+    def edit_normal_input(self, input_text):
+        self.enter_text(self.BASE_TEXTINPUT, input_text)
+
+    def get_normal_input_value(self):
+        return self.get_text(self.BASE_TEXTINPUT)

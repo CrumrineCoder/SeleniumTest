@@ -20,4 +20,4 @@ class BasePage:
         element.send_keys(text)
 
     def get_text(self, locator):
-        return self.find_element(locator).text
+        return self.find_element(locator).get_attribute("value")
