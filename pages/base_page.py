@@ -19,5 +19,5 @@ class BasePage:
         element.clear()
         element.send_keys(text)
 
-    def get_text(self, locator):
+    def get_input_value(self, locator):
         return self.find_element(locator).get_attribute("value")

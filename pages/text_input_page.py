@@ -12,4 +12,4 @@ class TextInputPage(BasePage):
         self.enter_text(self.BASE_TEXTINPUT, input_text)
 
     def get_normal_input_value(self):
-        return self.get_text(self.BASE_TEXTINPUT)
+        return self.get_input_value(self.BASE_TEXTINPUT)
